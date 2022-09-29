@@ -1,0 +1,43 @@
+<Main_Pogoda>:
+    MDBoxLayout:
+        orientation:'vertical'
+        pos:root.pos
+        size:root.size
+        MDBoxLayout:
+            size:root.size
+            orientation:"vertical"
+            height: root.height
+            width:root.width
+            BoxLayout:
+                height: root.height
+                width:root.width
+                orientation:"vertical"
+                MDLabel:
+                    text:''
+                    halign:'center'
+                    id: pogoda
+                MDLabel:
+                    text:''
+                    halign:'center'
+                    id: gradus
+            MDBoxLayout:
+                orientation:'vertical'
+                MDTextField:
+                    hint_text: "Введите ваш город:"
+                    id: sity_input
+                    size_hint_x:0.5
+                    pos_hint:{'center_x':0.5,'center_y':0.5}
+                    mode: "round"
+
+
+            MDBoxLayout:
+                orientation:"vertical"
+                size_hint_x:1
+                MDFlatButton:
+                    text: "[color=#00ffcc]Начать[/color]"
+                    size_hint_x:1
+                    id:name_button_starting
+                    on_press:root.session()
+                MDFlatButton:
+                    text: "[color=#00ffcc]Выход[/color]"
+                    size_hint_x:1
